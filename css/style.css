@@ -1,3 +1,92 @@
 body {
-  font-family: sans-serif;
+  background: #303030;
+  color: #ccc;
 }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.onepage-pagination {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  background: #000;
+  opacity: 0.2;
+  transition: opacity 1s;
+}
+.onepage-pagination:hover {
+  opacity: 1;
+  transition: opacity 0.1s;
+}
+
+.onepage-pagination li a{
+  display: block;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  margin: 3px 0;
+  padding: 3px;
+  background: #444;
+}
+.onepage-pagination li a:before{
+  /* the circles */
+  content: '';
+  display: none;
+}
+
+.onepage-pagination li a.active:before{
+  display: none;
+}
+
+.onepage-pagination li a.active {
+  background: transparent;
+}
+
+.onepage-pagination li a.back {
+  background: url('../img/back.png') 50% no-repeat;
+  color: transparent;
+  opacity: 0.5;
+}
+
+
+.disabled-onepage-scroll .onepage-pagination {
+  display: none;
+}
+
+
+/*.onepage
+nav .back {
+  height: 19px;
+  width: 25px;
+  color: transparent;
+  background: url('../img/back.png');
+}*/

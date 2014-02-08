@@ -1,0 +1,6 @@
+
+stack:
+ * jquery
+ * jquery.onepage-scroll -- modified for a custom paginator
+ * visuallyhidden from h5bp
+ * back button: Arrow by Thomas Le Bas from The Noun Project
