@@ -50,6 +50,10 @@
      responsiveFallback: false
   });
 
+  $('.feature').click(function() {
+    $('.main').moveDown();
+  });
+
 
   var setSectionSize = function(index, section) {
     var meta = $('.meta', section),
@@ -60,8 +64,11 @@
         heightFactor = imCanvasHeight / im[0].naturalHeight;
     if (widthFactor < heightFactor) {
       im.width(im[0].naturalWidth * widthFactor).addClass('width-constrained');
+      var top_offset = (imCanvasHeight - im.height()) / 2;
+      $('.image-canvas', section).css({top: top_offset});
     } else {
       im.width(im[0].naturalWidth * heightFactor).removeClass('width-constrained');
+      $('.image-canvas', section).css({top: 0});
     }
   };
 

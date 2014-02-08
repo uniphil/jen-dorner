@@ -46,10 +46,16 @@ body {
 }
 
 
+.image-canvas {
+  position: relative;
+}
 /* Images have the class 'feature' */
 .feature {
   display: block;
   margin: 3px auto;
+}
+.feature:hover {
+  cursor: pointer;
 }
 .feature.width-constrained {
   margin: 3px 3px 3px 19px; /* the pager width is 32px + 3px padding * 2*/
