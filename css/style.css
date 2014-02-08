@@ -1,44 +1,18 @@
 body {
   background: #303030;
   color: #ccc;
+  font-family: sans-serif;
+  font-size: 14px;
 }
 
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
+/* PAGINATOR STYLE OVERRIDES */
 .onepage-pagination {
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   width: 32px;
+  padding: 3px;
   background: #000;
   opacity: 0.2;
   transition: opacity 1s;
@@ -47,7 +21,6 @@ body {
   opacity: 1;
   transition: opacity 0.1s;
 }
-
 .onepage-pagination li a{
   display: block;
   box-sizing: border-box;
@@ -58,19 +31,16 @@ body {
   background: #444;
 }
 .onepage-pagination li a:before{
-  /* the circles */
+  /* ononepage-scroll uses this for the circles */
   content: '';
   display: none;
 }
-
 .onepage-pagination li a.active:before{
   display: none;
 }
-
 .onepage-pagination li a.active {
   background: transparent;
 }
-
 .onepage-pagination li a.back {
   background: url('../img/back.png') 50% no-repeat;
   color: transparent;
@@ -78,15 +48,21 @@ body {
 }
 
 
-.disabled-onepage-scroll .onepage-pagination {
-  display: none;
+/* Images have the class 'feature' */
+.feature {
+  display: block;
+  margin: 3px auto;
+}
+.feature.width-constrained {
+  margin: 3px 3px 3px 19px; /* the pager width is 32px + 3px padding * 2*/
+}
+/* Textual descriptions below feature images */
+.meta {
+  text-align: center;
 }
 
 
-/*.onepage
-nav .back {
-  height: 19px;
-  width: 25px;
-  color: transparent;
-  background: url('../img/back.png');
-}*/
+/* GENERAL STYLE */
+a {
+  color: inherit;
+}
