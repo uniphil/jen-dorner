@@ -29,13 +29,11 @@ body {
   margin: 3px 0;
   padding: 3px;
   background: #444;
+  transition: background 0.3s;
 }
 .onepage-pagination li a:before{
   /* ononepage-scroll uses this for the circles */
   content: '';
-  display: none;
-}
-.onepage-pagination li a.active:before{
   display: none;
 }
 .onepage-pagination li a.active {
